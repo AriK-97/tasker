@@ -1,0 +1,89 @@
+body {
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Added to center content vertically */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #003366; /* Dark Azure Blue background */
+    color: #fff; /* White text */
+}
+
+header {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px 12px 0 0; /* Rounded top corners */
+    text-align: center;
+    background-color: #0066cc; /* Darker Azure Blue header */
+
+    h1 {
+        margin: 0;
+        letter-spacing: 2px;
+        color: #fff; /* White text */
+    }
+}
+
+table {
+    margin-bottom: 30px;
+    border-collapse: collapse;
+
+    th, td {
+        padding: 10px;
+        border: 1px solid white;
+    }
+}
+
+.forms {
+    display: flex;
+}
+
+form {
+    width: 300px;
+    margin: 0 30px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #3399cc; /* Azure Blue container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    :first-of-type {
+        margin-left: 0;
+    }
+
+    :last-of-type {
+        margin-right: 0;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 12px;
+        color: #fff; /* White text */
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #fff; /* White border */
+        border-radius: 6px;
+        background-color: #cce0ff; /* Light Azure Blue input background */
+        color: #003366; /* Dark Azure Blue text */
+    }
+
+    button {
+        background-color: #0066cc; /* Darker Azure Blue button */
+        color: #fff; /* White text */
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #005bb5; /* Darker shade on hover */
+    }
+}

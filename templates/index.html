@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>TASKS</h1>
+    </header>
+    <h2>Active tasks:</h2>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Creation Date</th>
+            <th>Expiration Date</th>
+        </thead>
+        <tbody>
+            {% for task in tasks if not task.completed %}
+                <tr>
+                    <td>{{ task.id }}</td>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.description }}</td>
+                    <td>{{ task.creation_date }}</td>
+                    <td>{{ task.expiration_date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="forms">
+        <form method="POST" action="/create-task">
+            <h2>Create a new task</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br />
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            <br />
+            <label for="duration">Duration (in days):</label>
+            <input type="number" id="duration" name="duration" min="7" max="21" required>
+            <br />
+            <button type="submit">Create</button>
+        </form>
+
+        <form method="POST" action="/update-task">
+            <h2>Update an existing task</h2>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+            <br />
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br />
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description">
+            <br />
+            <label for="duration">Duration (in days):</label>
+            <input type="number" id="duration" name="duration" min="7" max="21">
+            <br />
+            <label for="completed">Completed:</label>
+            <input type="checkbox" id="completed" name="completed">
+            <br />
+            <button type="submit">Update</button>
+        </form>
+
+        <form method="POST" action="/delete-task">
+            <h2>Delete an existing task</h2>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+            <br />
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+</body>
+</html>
