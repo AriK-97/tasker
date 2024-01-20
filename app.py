@@ -23,7 +23,7 @@ class Task:
 TASKS = [
     Task(
         "Write report",
-        "Report about businesss trip to UK. Don't forget to include all presentations",
+        "Report about businesss trip to UK. Don't forget to include all presentations!",
         14
     ),
     Task(
