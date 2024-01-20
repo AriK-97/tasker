@@ -22,13 +22,13 @@ class Task:
 # list storing tasks which could be replaced by a database (data is not persisted when server is restarted)
 TASKS = [
     Task(
-        "Important Task",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in augue ut risus imperdiet efficitur vitae nec nunc.",
+        "Write report",
+        "Report about businesss trip to UK. Don't forget to include all presentations",
         14
     ),
     Task(
-        "Low Priority Task",
-        "Aliquam et nisi sodales, commodo dui vel, tincidunt odio. Integer quis arcu nulla. Nulla facilisis id quam ut elementum.",
+        "Record-keeping",
+        "Find all legal acts about record-keeping with personal data and analyze them.",
         20
     )
 ]
